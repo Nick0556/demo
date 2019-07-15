@@ -1,0 +1,848 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.PgbMapper">
+  <resultMap id="BaseResultMap" type="com.domain.Pgb">
+    <!--@mbg.generated-->
+    <id column="Id" jdbcType="INTEGER" property="id" />
+    <result column="pname" jdbcType="VARCHAR" property="pname" />
+    <result column="identity" jdbcType="VARCHAR" property="identity" />
+    <result column="rq" jdbcType="VARCHAR" property="rq" />
+    <result column="zyh" jdbcType="VARCHAR" property="zyh" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="age" jdbcType="VARCHAR" property="age" />
+    <result column="jszk" jdbcType="VARCHAR" property="jszk" />
+    <result column="sznl" jdbcType="VARCHAR" property="sznl" />
+    <result column="shgn" jdbcType="VARCHAR" property="shgn" />
+    <result column="smzl" jdbcType="VARCHAR" property="smzl" />
+    <result column="ysqk" jdbcType="VARCHAR" property="ysqk" />
+    <result column="nl" jdbcType="VARCHAR" property="nl" />
+    <result column="nl_s" jdbcType="VARCHAR" property="nlS" />
+    <result column="nl_co" jdbcType="VARCHAR" property="nlCo" />
+    <result column="db" jdbcType="VARCHAR" property="db" />
+    <result column="db_cs" jdbcType="VARCHAR" property="dbCs" />
+    <result column="db_qt" jdbcType="VARCHAR" property="dbQt" />
+    <result column="lczz" jdbcType="VARCHAR" property="lczz" />
+    <result column="tz1" jdbcType="VARCHAR" property="tz1" />
+    <result column="tz2" jdbcType="VARCHAR" property="tz2" />
+    <result column="sz" jdbcType="VARCHAR" property="sz" />
+    <result column="szbw" jdbcType="VARCHAR" property="szbw" />
+    <result column="fbhxy" jdbcType="VARCHAR" property="fbhxy" />
+    <result column="fbly" jdbcType="VARCHAR" property="fbly" />
+    <result column="fb" jdbcType="VARCHAR" property="fb" />
+    <result column="dry" jdbcType="VARCHAR" property="dry" />
+    <result column="dryadd" jdbcType="VARCHAR" property="dryadd" />
+    <result column="dry_dt" jdbcType="VARCHAR" property="dryDt" />
+    <result column="KT/V" jdbcType="VARCHAR" property="ktV" />
+    <result column="URR" jdbcType="VARCHAR" property="urr" />
+    <result column="RBC" jdbcType="VARCHAR" property="rbc" />
+    <result column="HB" jdbcType="VARCHAR" property="hb" />
+    <result column="PTL" jdbcType="VARCHAR" property="ptl" />
+    <result column="ALB" jdbcType="VARCHAR" property="alb" />
+    <result column="TCH" jdbcType="VARCHAR" property="tch" />
+    <result column="TG" jdbcType="VARCHAR" property="tg" />
+    <result column="FBG" jdbcType="VARCHAR" property="fbg" />
+    <result column="CRP" jdbcType="VARCHAR" property="crp" />
+    <result column="BUN" jdbcType="VARCHAR" property="bun" />
+    <result column="Scr" jdbcType="VARCHAR" property="scr" />
+    <result column="UA" jdbcType="VARCHAR" property="ua" />
+    <result column="K" jdbcType="VARCHAR" property="k" />
+    <result column="na" jdbcType="VARCHAR" property="na" />
+    <result column="ca" jdbcType="VARCHAR" property="ca" />
+    <result column="p" jdbcType="VARCHAR" property="p" />
+    <result column="iPTH" jdbcType="VARCHAR" property="ipth" />
+    <result column="SF" jdbcType="VARCHAR" property="sf" />
+    <result column="TSAT" jdbcType="VARCHAR" property="tsat" />
+    <result column="CTXdt" jdbcType="VARCHAR" property="ctxdt" />
+    <result column="CTX" jdbcType="VARCHAR" property="ctx" />
+    <result column="xc" jdbcType="VARCHAR" property="xc" />
+    <result column="xcqt" jdbcType="VARCHAR" property="xcqt" />
+    <result column="bfz" jdbcType="VARCHAR" property="bfz" />
+    <result column="txpl" jdbcType="VARCHAR" property="txpl" />
+    <result column="txgg" jdbcType="VARCHAR" property="txgg" />
+    <result column="txggz" jdbcType="VARCHAR" property="txggz" />
+    <result column="txsj" jdbcType="VARCHAR" property="txsj" />
+    <result column="txsjgg" jdbcType="VARCHAR" property="txsjgg" />
+    <result column="txsjggz" jdbcType="VARCHAR" property="txsjggz" />
+    <result column="txfs" jdbcType="VARCHAR" property="txfs" />
+    <result column="txfsgg" jdbcType="VARCHAR" property="txfsgg" />
+    <result column="txfsggz" jdbcType="VARCHAR" property="txfsggz" />
+    <result column="xgtl" jdbcType="VARCHAR" property="xgtl" />
+    <result column="xxgtlpj" jdbcType="VARCHAR" property="xxgtlpj" />
+    <result column="xggg" jdbcType="VARCHAR" property="xggg" />
+    <result column="cfx" jdbcType="VARCHAR" property="cfx" />
+    <result column="yy" jdbcType="VARCHAR" property="yy" />
+    <result column="gj" jdbcType="VARCHAR" property="gj" />
+    <result column="gjqt" jdbcType="VARCHAR" property="gjqt" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    Id, pname, `identity`, rq, zyh, sex, age, jszk, sznl, shgn, smzl, ysqk, nl, nl_s, 
+    nl_co, db, db_cs, db_qt, lczz, tz1, tz2, sz, szbw, fbhxy, fbly, fb, dry, dryadd, 
+    dry_dt, KT/V, URR, RBC, HB, PTL, ALB, TCH, TG, FBG, CRP, BUN, Scr, UA, `K`, na, ca, 
+    p, iPTH, SF, TSAT, CTXdt, CTX, xc, xcqt, bfz, txpl, txgg, txggz, txsj, txsjgg, txsjggz, 
+    txfs, txfsgg, txfsggz, xgtl, xxgtlpj, xggg, cfx, yy, gj, gjqt
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from pgb
+    where Id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from pgb
+    where Id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="Id" keyProperty="id" parameterType="com.domain.Pgb" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into pgb (pname, `identity`, rq, 
+      zyh, sex, age, jszk, 
+      sznl, shgn, smzl, ysqk, 
+      nl, nl_s, nl_co, db, 
+      db_cs, db_qt, lczz, tz1, 
+      tz2, sz, szbw, fbhxy, 
+      fbly, fb, dry, dryadd, 
+      dry_dt, KT/V, URR, RBC, 
+      HB, PTL, ALB, TCH, 
+      TG, FBG, CRP, BUN, 
+      Scr, UA, `K`, na, 
+      ca, p, iPTH, SF, 
+      TSAT, CTXdt, CTX, xc, 
+      xcqt, bfz, txpl, txgg, 
+      txggz, txsj, txsjgg, 
+      txsjggz, txfs, txfsgg, 
+      txfsggz, xgtl, xxgtlpj, 
+      xggg, cfx, yy, gj, 
+      gjqt)
+    values (#{pname,jdbcType=VARCHAR}, #{identity,jdbcType=VARCHAR}, #{rq,jdbcType=VARCHAR}, 
+      #{zyh,jdbcType=VARCHAR}, #{sex,jdbcType=VARCHAR}, #{age,jdbcType=VARCHAR}, #{jszk,jdbcType=VARCHAR}, 
+      #{sznl,jdbcType=VARCHAR}, #{shgn,jdbcType=VARCHAR}, #{smzl,jdbcType=VARCHAR}, #{ysqk,jdbcType=VARCHAR}, 
+      #{nl,jdbcType=VARCHAR}, #{nlS,jdbcType=VARCHAR}, #{nlCo,jdbcType=VARCHAR}, #{db,jdbcType=VARCHAR}, 
+      #{dbCs,jdbcType=VARCHAR}, #{dbQt,jdbcType=VARCHAR}, #{lczz,jdbcType=VARCHAR}, #{tz1,jdbcType=VARCHAR}, 
+      #{tz2,jdbcType=VARCHAR}, #{sz,jdbcType=VARCHAR}, #{szbw,jdbcType=VARCHAR}, #{fbhxy,jdbcType=VARCHAR}, 
+      #{fbly,jdbcType=VARCHAR}, #{fb,jdbcType=VARCHAR}, #{dry,jdbcType=VARCHAR}, #{dryadd,jdbcType=VARCHAR}, 
+      #{dryDt,jdbcType=VARCHAR}, #{ktV,jdbcType=VARCHAR}, #{urr,jdbcType=VARCHAR}, #{rbc,jdbcType=VARCHAR}, 
+      #{hb,jdbcType=VARCHAR}, #{ptl,jdbcType=VARCHAR}, #{alb,jdbcType=VARCHAR}, #{tch,jdbcType=VARCHAR}, 
+      #{tg,jdbcType=VARCHAR}, #{fbg,jdbcType=VARCHAR}, #{crp,jdbcType=VARCHAR}, #{bun,jdbcType=VARCHAR}, 
+      #{scr,jdbcType=VARCHAR}, #{ua,jdbcType=VARCHAR}, #{k,jdbcType=VARCHAR}, #{na,jdbcType=VARCHAR}, 
+      #{ca,jdbcType=VARCHAR}, #{p,jdbcType=VARCHAR}, #{ipth,jdbcType=VARCHAR}, #{sf,jdbcType=VARCHAR}, 
+      #{tsat,jdbcType=VARCHAR}, #{ctxdt,jdbcType=VARCHAR}, #{ctx,jdbcType=VARCHAR}, #{xc,jdbcType=VARCHAR}, 
+      #{xcqt,jdbcType=VARCHAR}, #{bfz,jdbcType=VARCHAR}, #{txpl,jdbcType=VARCHAR}, #{txgg,jdbcType=VARCHAR}, 
+      #{txggz,jdbcType=VARCHAR}, #{txsj,jdbcType=VARCHAR}, #{txsjgg,jdbcType=VARCHAR}, 
+      #{txsjggz,jdbcType=VARCHAR}, #{txfs,jdbcType=VARCHAR}, #{txfsgg,jdbcType=VARCHAR}, 
+      #{txfsggz,jdbcType=VARCHAR}, #{xgtl,jdbcType=VARCHAR}, #{xxgtlpj,jdbcType=VARCHAR}, 
+      #{xggg,jdbcType=VARCHAR}, #{cfx,jdbcType=VARCHAR}, #{yy,jdbcType=VARCHAR}, #{gj,jdbcType=VARCHAR}, 
+      #{gjqt,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" keyColumn="Id" keyProperty="id" parameterType="com.domain.Pgb" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into pgb
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="pname != null">
+        pname,
+      </if>
+      <if test="identity != null">
+        `identity`,
+      </if>
+      <if test="rq != null">
+        rq,
+      </if>
+      <if test="zyh != null">
+        zyh,
+      </if>
+      <if test="sex != null">
+        sex,
+      </if>
+      <if test="age != null">
+        age,
+      </if>
+      <if test="jszk != null">
+        jszk,
+      </if>
+      <if test="sznl != null">
+        sznl,
+      </if>
+      <if test="shgn != null">
+        shgn,
+      </if>
+      <if test="smzl != null">
+        smzl,
+      </if>
+      <if test="ysqk != null">
+        ysqk,
+      </if>
+      <if test="nl != null">
+        nl,
+      </if>
+      <if test="nlS != null">
+        nl_s,
+      </if>
+      <if test="nlCo != null">
+        nl_co,
+      </if>
+      <if test="db != null">
+        db,
+      </if>
+      <if test="dbCs != null">
+        db_cs,
+      </if>
+      <if test="dbQt != null">
+        db_qt,
+      </if>
+      <if test="lczz != null">
+        lczz,
+      </if>
+      <if test="tz1 != null">
+        tz1,
+      </if>
+      <if test="tz2 != null">
+        tz2,
+      </if>
+      <if test="sz != null">
+        sz,
+      </if>
+      <if test="szbw != null">
+        szbw,
+      </if>
+      <if test="fbhxy != null">
+        fbhxy,
+      </if>
+      <if test="fbly != null">
+        fbly,
+      </if>
+      <if test="fb != null">
+        fb,
+      </if>
+      <if test="dry != null">
+        dry,
+      </if>
+      <if test="dryadd != null">
+        dryadd,
+      </if>
+      <if test="dryDt != null">
+        dry_dt,
+      </if>
+      <if test="ktV != null">
+        KT/V,
+      </if>
+      <if test="urr != null">
+        URR,
+      </if>
+      <if test="rbc != null">
+        RBC,
+      </if>
+      <if test="hb != null">
+        HB,
+      </if>
+      <if test="ptl != null">
+        PTL,
+      </if>
+      <if test="alb != null">
+        ALB,
+      </if>
+      <if test="tch != null">
+        TCH,
+      </if>
+      <if test="tg != null">
+        TG,
+      </if>
+      <if test="fbg != null">
+        FBG,
+      </if>
+      <if test="crp != null">
+        CRP,
+      </if>
+      <if test="bun != null">
+        BUN,
+      </if>
+      <if test="scr != null">
+        Scr,
+      </if>
+      <if test="ua != null">
+        UA,
+      </if>
+      <if test="k != null">
+        `K`,
+      </if>
+      <if test="na != null">
+        na,
+      </if>
+      <if test="ca != null">
+        ca,
+      </if>
+      <if test="p != null">
+        p,
+      </if>
+      <if test="ipth != null">
+        iPTH,
+      </if>
+      <if test="sf != null">
+        SF,
+      </if>
+      <if test="tsat != null">
+        TSAT,
+      </if>
+      <if test="ctxdt != null">
+        CTXdt,
+      </if>
+      <if test="ctx != null">
+        CTX,
+      </if>
+      <if test="xc != null">
+        xc,
+      </if>
+      <if test="xcqt != null">
+        xcqt,
+      </if>
+      <if test="bfz != null">
+        bfz,
+      </if>
+      <if test="txpl != null">
+        txpl,
+      </if>
+      <if test="txgg != null">
+        txgg,
+      </if>
+      <if test="txggz != null">
+        txggz,
+      </if>
+      <if test="txsj != null">
+        txsj,
+      </if>
+      <if test="txsjgg != null">
+        txsjgg,
+      </if>
+      <if test="txsjggz != null">
+        txsjggz,
+      </if>
+      <if test="txfs != null">
+        txfs,
+      </if>
+      <if test="txfsgg != null">
+        txfsgg,
+      </if>
+      <if test="txfsggz != null">
+        txfsggz,
+      </if>
+      <if test="xgtl != null">
+        xgtl,
+      </if>
+      <if test="xxgtlpj != null">
+        xxgtlpj,
+      </if>
+      <if test="xggg != null">
+        xggg,
+      </if>
+      <if test="cfx != null">
+        cfx,
+      </if>
+      <if test="yy != null">
+        yy,
+      </if>
+      <if test="gj != null">
+        gj,
+      </if>
+      <if test="gjqt != null">
+        gjqt,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="pname != null">
+        #{pname,jdbcType=VARCHAR},
+      </if>
+      <if test="identity != null">
+        #{identity,jdbcType=VARCHAR},
+      </if>
+      <if test="rq != null">
+        #{rq,jdbcType=VARCHAR},
+      </if>
+      <if test="zyh != null">
+        #{zyh,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null">
+        #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null">
+        #{age,jdbcType=VARCHAR},
+      </if>
+      <if test="jszk != null">
+        #{jszk,jdbcType=VARCHAR},
+      </if>
+      <if test="sznl != null">
+        #{sznl,jdbcType=VARCHAR},
+      </if>
+      <if test="shgn != null">
+        #{shgn,jdbcType=VARCHAR},
+      </if>
+      <if test="smzl != null">
+        #{smzl,jdbcType=VARCHAR},
+      </if>
+      <if test="ysqk != null">
+        #{ysqk,jdbcType=VARCHAR},
+      </if>
+      <if test="nl != null">
+        #{nl,jdbcType=VARCHAR},
+      </if>
+      <if test="nlS != null">
+        #{nlS,jdbcType=VARCHAR},
+      </if>
+      <if test="nlCo != null">
+        #{nlCo,jdbcType=VARCHAR},
+      </if>
+      <if test="db != null">
+        #{db,jdbcType=VARCHAR},
+      </if>
+      <if test="dbCs != null">
+        #{dbCs,jdbcType=VARCHAR},
+      </if>
+      <if test="dbQt != null">
+        #{dbQt,jdbcType=VARCHAR},
+      </if>
+      <if test="lczz != null">
+        #{lczz,jdbcType=VARCHAR},
+      </if>
+      <if test="tz1 != null">
+        #{tz1,jdbcType=VARCHAR},
+      </if>
+      <if test="tz2 != null">
+        #{tz2,jdbcType=VARCHAR},
+      </if>
+      <if test="sz != null">
+        #{sz,jdbcType=VARCHAR},
+      </if>
+      <if test="szbw != null">
+        #{szbw,jdbcType=VARCHAR},
+      </if>
+      <if test="fbhxy != null">
+        #{fbhxy,jdbcType=VARCHAR},
+      </if>
+      <if test="fbly != null">
+        #{fbly,jdbcType=VARCHAR},
+      </if>
+      <if test="fb != null">
+        #{fb,jdbcType=VARCHAR},
+      </if>
+      <if test="dry != null">
+        #{dry,jdbcType=VARCHAR},
+      </if>
+      <if test="dryadd != null">
+        #{dryadd,jdbcType=VARCHAR},
+      </if>
+      <if test="dryDt != null">
+        #{dryDt,jdbcType=VARCHAR},
+      </if>
+      <if test="ktV != null">
+        #{ktV,jdbcType=VARCHAR},
+      </if>
+      <if test="urr != null">
+        #{urr,jdbcType=VARCHAR},
+      </if>
+      <if test="rbc != null">
+        #{rbc,jdbcType=VARCHAR},
+      </if>
+      <if test="hb != null">
+        #{hb,jdbcType=VARCHAR},
+      </if>
+      <if test="ptl != null">
+        #{ptl,jdbcType=VARCHAR},
+      </if>
+      <if test="alb != null">
+        #{alb,jdbcType=VARCHAR},
+      </if>
+      <if test="tch != null">
+        #{tch,jdbcType=VARCHAR},
+      </if>
+      <if test="tg != null">
+        #{tg,jdbcType=VARCHAR},
+      </if>
+      <if test="fbg != null">
+        #{fbg,jdbcType=VARCHAR},
+      </if>
+      <if test="crp != null">
+        #{crp,jdbcType=VARCHAR},
+      </if>
+      <if test="bun != null">
+        #{bun,jdbcType=VARCHAR},
+      </if>
+      <if test="scr != null">
+        #{scr,jdbcType=VARCHAR},
+      </if>
+      <if test="ua != null">
+        #{ua,jdbcType=VARCHAR},
+      </if>
+      <if test="k != null">
+        #{k,jdbcType=VARCHAR},
+      </if>
+      <if test="na != null">
+        #{na,jdbcType=VARCHAR},
+      </if>
+      <if test="ca != null">
+        #{ca,jdbcType=VARCHAR},
+      </if>
+      <if test="p != null">
+        #{p,jdbcType=VARCHAR},
+      </if>
+      <if test="ipth != null">
+        #{ipth,jdbcType=VARCHAR},
+      </if>
+      <if test="sf != null">
+        #{sf,jdbcType=VARCHAR},
+      </if>
+      <if test="tsat != null">
+        #{tsat,jdbcType=VARCHAR},
+      </if>
+      <if test="ctxdt != null">
+        #{ctxdt,jdbcType=VARCHAR},
+      </if>
+      <if test="ctx != null">
+        #{ctx,jdbcType=VARCHAR},
+      </if>
+      <if test="xc != null">
+        #{xc,jdbcType=VARCHAR},
+      </if>
+      <if test="xcqt != null">
+        #{xcqt,jdbcType=VARCHAR},
+      </if>
+      <if test="bfz != null">
+        #{bfz,jdbcType=VARCHAR},
+      </if>
+      <if test="txpl != null">
+        #{txpl,jdbcType=VARCHAR},
+      </if>
+      <if test="txgg != null">
+        #{txgg,jdbcType=VARCHAR},
+      </if>
+      <if test="txggz != null">
+        #{txggz,jdbcType=VARCHAR},
+      </if>
+      <if test="txsj != null">
+        #{txsj,jdbcType=VARCHAR},
+      </if>
+      <if test="txsjgg != null">
+        #{txsjgg,jdbcType=VARCHAR},
+      </if>
+      <if test="txsjggz != null">
+        #{txsjggz,jdbcType=VARCHAR},
+      </if>
+      <if test="txfs != null">
+        #{txfs,jdbcType=VARCHAR},
+      </if>
+      <if test="txfsgg != null">
+        #{txfsgg,jdbcType=VARCHAR},
+      </if>
+      <if test="txfsggz != null">
+        #{txfsggz,jdbcType=VARCHAR},
+      </if>
+      <if test="xgtl != null">
+        #{xgtl,jdbcType=VARCHAR},
+      </if>
+      <if test="xxgtlpj != null">
+        #{xxgtlpj,jdbcType=VARCHAR},
+      </if>
+      <if test="xggg != null">
+        #{xggg,jdbcType=VARCHAR},
+      </if>
+      <if test="cfx != null">
+        #{cfx,jdbcType=VARCHAR},
+      </if>
+      <if test="yy != null">
+        #{yy,jdbcType=VARCHAR},
+      </if>
+      <if test="gj != null">
+        #{gj,jdbcType=VARCHAR},
+      </if>
+      <if test="gjqt != null">
+        #{gjqt,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.domain.Pgb">
+    <!--@mbg.generated-->
+    update pgb
+    <set>
+      <if test="pname != null">
+        pname = #{pname,jdbcType=VARCHAR},
+      </if>
+      <if test="identity != null">
+        `identity` = #{identity,jdbcType=VARCHAR},
+      </if>
+      <if test="rq != null">
+        rq = #{rq,jdbcType=VARCHAR},
+      </if>
+      <if test="zyh != null">
+        zyh = #{zyh,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null">
+        sex = #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null">
+        age = #{age,jdbcType=VARCHAR},
+      </if>
+      <if test="jszk != null">
+        jszk = #{jszk,jdbcType=VARCHAR},
+      </if>
+      <if test="sznl != null">
+        sznl = #{sznl,jdbcType=VARCHAR},
+      </if>
+      <if test="shgn != null">
+        shgn = #{shgn,jdbcType=VARCHAR},
+      </if>
+      <if test="smzl != null">
+        smzl = #{smzl,jdbcType=VARCHAR},
+      </if>
+      <if test="ysqk != null">
+        ysqk = #{ysqk,jdbcType=VARCHAR},
+      </if>
+      <if test="nl != null">
+        nl = #{nl,jdbcType=VARCHAR},
+      </if>
+      <if test="nlS != null">
+        nl_s = #{nlS,jdbcType=VARCHAR},
+      </if>
+      <if test="nlCo != null">
+        nl_co = #{nlCo,jdbcType=VARCHAR},
+      </if>
+      <if test="db != null">
+        db = #{db,jdbcType=VARCHAR},
+      </if>
+      <if test="dbCs != null">
+        db_cs = #{dbCs,jdbcType=VARCHAR},
+      </if>
+      <if test="dbQt != null">
+        db_qt = #{dbQt,jdbcType=VARCHAR},
+      </if>
+      <if test="lczz != null">
+        lczz = #{lczz,jdbcType=VARCHAR},
+      </if>
+      <if test="tz1 != null">
+        tz1 = #{tz1,jdbcType=VARCHAR},
+      </if>
+      <if test="tz2 != null">
+        tz2 = #{tz2,jdbcType=VARCHAR},
+      </if>
+      <if test="sz != null">
+        sz = #{sz,jdbcType=VARCHAR},
+      </if>
+      <if test="szbw != null">
+        szbw = #{szbw,jdbcType=VARCHAR},
+      </if>
+      <if test="fbhxy != null">
+        fbhxy = #{fbhxy,jdbcType=VARCHAR},
+      </if>
+      <if test="fbly != null">
+        fbly = #{fbly,jdbcType=VARCHAR},
+      </if>
+      <if test="fb != null">
+        fb = #{fb,jdbcType=VARCHAR},
+      </if>
+      <if test="dry != null">
+        dry = #{dry,jdbcType=VARCHAR},
+      </if>
+      <if test="dryadd != null">
+        dryadd = #{dryadd,jdbcType=VARCHAR},
+      </if>
+      <if test="dryDt != null">
+        dry_dt = #{dryDt,jdbcType=VARCHAR},
+      </if>
+      <if test="ktV != null">
+        KT/V = #{ktV,jdbcType=VARCHAR},
+      </if>
+      <if test="urr != null">
+        URR = #{urr,jdbcType=VARCHAR},
+      </if>
+      <if test="rbc != null">
+        RBC = #{rbc,jdbcType=VARCHAR},
+      </if>
+      <if test="hb != null">
+        HB = #{hb,jdbcType=VARCHAR},
+      </if>
+      <if test="ptl != null">
+        PTL = #{ptl,jdbcType=VARCHAR},
+      </if>
+      <if test="alb != null">
+        ALB = #{alb,jdbcType=VARCHAR},
+      </if>
+      <if test="tch != null">
+        TCH = #{tch,jdbcType=VARCHAR},
+      </if>
+      <if test="tg != null">
+        TG = #{tg,jdbcType=VARCHAR},
+      </if>
+      <if test="fbg != null">
+        FBG = #{fbg,jdbcType=VARCHAR},
+      </if>
+      <if test="crp != null">
+        CRP = #{crp,jdbcType=VARCHAR},
+      </if>
+      <if test="bun != null">
+        BUN = #{bun,jdbcType=VARCHAR},
+      </if>
+      <if test="scr != null">
+        Scr = #{scr,jdbcType=VARCHAR},
+      </if>
+      <if test="ua != null">
+        UA = #{ua,jdbcType=VARCHAR},
+      </if>
+      <if test="k != null">
+        `K` = #{k,jdbcType=VARCHAR},
+      </if>
+      <if test="na != null">
+        na = #{na,jdbcType=VARCHAR},
+      </if>
+      <if test="ca != null">
+        ca = #{ca,jdbcType=VARCHAR},
+      </if>
+      <if test="p != null">
+        p = #{p,jdbcType=VARCHAR},
+      </if>
+      <if test="ipth != null">
+        iPTH = #{ipth,jdbcType=VARCHAR},
+      </if>
+      <if test="sf != null">
+        SF = #{sf,jdbcType=VARCHAR},
+      </if>
+      <if test="tsat != null">
+        TSAT = #{tsat,jdbcType=VARCHAR},
+      </if>
+      <if test="ctxdt != null">
+        CTXdt = #{ctxdt,jdbcType=VARCHAR},
+      </if>
+      <if test="ctx != null">
+        CTX = #{ctx,jdbcType=VARCHAR},
+      </if>
+      <if test="xc != null">
+        xc = #{xc,jdbcType=VARCHAR},
+      </if>
+      <if test="xcqt != null">
+        xcqt = #{xcqt,jdbcType=VARCHAR},
+      </if>
+      <if test="bfz != null">
+        bfz = #{bfz,jdbcType=VARCHAR},
+      </if>
+      <if test="txpl != null">
+        txpl = #{txpl,jdbcType=VARCHAR},
+      </if>
+      <if test="txgg != null">
+        txgg = #{txgg,jdbcType=VARCHAR},
+      </if>
+      <if test="txggz != null">
+        txggz = #{txggz,jdbcType=VARCHAR},
+      </if>
+      <if test="txsj != null">
+        txsj = #{txsj,jdbcType=VARCHAR},
+      </if>
+      <if test="txsjgg != null">
+        txsjgg = #{txsjgg,jdbcType=VARCHAR},
+      </if>
+      <if test="txsjggz != null">
+        txsjggz = #{txsjggz,jdbcType=VARCHAR},
+      </if>
+      <if test="txfs != null">
+        txfs = #{txfs,jdbcType=VARCHAR},
+      </if>
+      <if test="txfsgg != null">
+        txfsgg = #{txfsgg,jdbcType=VARCHAR},
+      </if>
+      <if test="txfsggz != null">
+        txfsggz = #{txfsggz,jdbcType=VARCHAR},
+      </if>
+      <if test="xgtl != null">
+        xgtl = #{xgtl,jdbcType=VARCHAR},
+      </if>
+      <if test="xxgtlpj != null">
+        xxgtlpj = #{xxgtlpj,jdbcType=VARCHAR},
+      </if>
+      <if test="xggg != null">
+        xggg = #{xggg,jdbcType=VARCHAR},
+      </if>
+      <if test="cfx != null">
+        cfx = #{cfx,jdbcType=VARCHAR},
+      </if>
+      <if test="yy != null">
+        yy = #{yy,jdbcType=VARCHAR},
+      </if>
+      <if test="gj != null">
+        gj = #{gj,jdbcType=VARCHAR},
+      </if>
+      <if test="gjqt != null">
+        gjqt = #{gjqt,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where Id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.domain.Pgb">
+    <!--@mbg.generated-->
+    update pgb
+    set pname = #{pname,jdbcType=VARCHAR},
+      `identity` = #{identity,jdbcType=VARCHAR},
+      rq = #{rq,jdbcType=VARCHAR},
+      zyh = #{zyh,jdbcType=VARCHAR},
+      sex = #{sex,jdbcType=VARCHAR},
+      age = #{age,jdbcType=VARCHAR},
+      jszk = #{jszk,jdbcType=VARCHAR},
+      sznl = #{sznl,jdbcType=VARCHAR},
+      shgn = #{shgn,jdbcType=VARCHAR},
+      smzl = #{smzl,jdbcType=VARCHAR},
+      ysqk = #{ysqk,jdbcType=VARCHAR},
+      nl = #{nl,jdbcType=VARCHAR},
+      nl_s = #{nlS,jdbcType=VARCHAR},
+      nl_co = #{nlCo,jdbcType=VARCHAR},
+      db = #{db,jdbcType=VARCHAR},
+      db_cs = #{dbCs,jdbcType=VARCHAR},
+      db_qt = #{dbQt,jdbcType=VARCHAR},
+      lczz = #{lczz,jdbcType=VARCHAR},
+      tz1 = #{tz1,jdbcType=VARCHAR},
+      tz2 = #{tz2,jdbcType=VARCHAR},
+      sz = #{sz,jdbcType=VARCHAR},
+      szbw = #{szbw,jdbcType=VARCHAR},
+      fbhxy = #{fbhxy,jdbcType=VARCHAR},
+      fbly = #{fbly,jdbcType=VARCHAR},
+      fb = #{fb,jdbcType=VARCHAR},
+      dry = #{dry,jdbcType=VARCHAR},
+      dryadd = #{dryadd,jdbcType=VARCHAR},
+      dry_dt = #{dryDt,jdbcType=VARCHAR},
+      KT/V = #{ktV,jdbcType=VARCHAR},
+      URR = #{urr,jdbcType=VARCHAR},
+      RBC = #{rbc,jdbcType=VARCHAR},
+      HB = #{hb,jdbcType=VARCHAR},
+      PTL = #{ptl,jdbcType=VARCHAR},
+      ALB = #{alb,jdbcType=VARCHAR},
+      TCH = #{tch,jdbcType=VARCHAR},
+      TG = #{tg,jdbcType=VARCHAR},
+      FBG = #{fbg,jdbcType=VARCHAR},
+      CRP = #{crp,jdbcType=VARCHAR},
+      BUN = #{bun,jdbcType=VARCHAR},
+      Scr = #{scr,jdbcType=VARCHAR},
+      UA = #{ua,jdbcType=VARCHAR},
+      `K` = #{k,jdbcType=VARCHAR},
+      na = #{na,jdbcType=VARCHAR},
+      ca = #{ca,jdbcType=VARCHAR},
+      p = #{p,jdbcType=VARCHAR},
+      iPTH = #{ipth,jdbcType=VARCHAR},
+      SF = #{sf,jdbcType=VARCHAR},
+      TSAT = #{tsat,jdbcType=VARCHAR},
+      CTXdt = #{ctxdt,jdbcType=VARCHAR},
+      CTX = #{ctx,jdbcType=VARCHAR},
+      xc = #{xc,jdbcType=VARCHAR},
+      xcqt = #{xcqt,jdbcType=VARCHAR},
+      bfz = #{bfz,jdbcType=VARCHAR},
+      txpl = #{txpl,jdbcType=VARCHAR},
+      txgg = #{txgg,jdbcType=VARCHAR},
+      txggz = #{txggz,jdbcType=VARCHAR},
+      txsj = #{txsj,jdbcType=VARCHAR},
+      txsjgg = #{txsjgg,jdbcType=VARCHAR},
+      txsjggz = #{txsjggz,jdbcType=VARCHAR},
+      txfs = #{txfs,jdbcType=VARCHAR},
+      txfsgg = #{txfsgg,jdbcType=VARCHAR},
+      txfsggz = #{txfsggz,jdbcType=VARCHAR},
+      xgtl = #{xgtl,jdbcType=VARCHAR},
+      xxgtlpj = #{xxgtlpj,jdbcType=VARCHAR},
+      xggg = #{xggg,jdbcType=VARCHAR},
+      cfx = #{cfx,jdbcType=VARCHAR},
+      yy = #{yy,jdbcType=VARCHAR},
+      gj = #{gj,jdbcType=VARCHAR},
+      gjqt = #{gjqt,jdbcType=VARCHAR}
+    where Id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

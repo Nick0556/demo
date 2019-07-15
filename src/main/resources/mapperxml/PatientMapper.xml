@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mapper.PatientMapper">
+  <resultMap id="BaseResultMap" type="com.domain.Patient">
+    <!--@mbg.generated-->
+    <id column="ID" jdbcType="INTEGER" property="id" />
+    <result column="Source" jdbcType="VARCHAR" property="source" />
+    <result column="Name" jdbcType="VARCHAR" property="name" />
+    <result column="card" jdbcType="INTEGER" property="card" />
+    <result column="Sex" jdbcType="VARCHAR" property="sex" />
+    <result column="Identity" jdbcType="VARCHAR" property="identity" />
+    <result column="Birth" jdbcType="DATE" property="birth" />
+    <result column="Age" jdbcType="INTEGER" property="age" />
+    <result column="Tel" jdbcType="BIGINT" property="tel" />
+    <result column="ContactsName" jdbcType="VARCHAR" property="contactsname" />
+    <result column="ContactsTel" jdbcType="BIGINT" property="contactstel" />
+    <result column="InsuranceCategory" jdbcType="VARCHAR" property="insurancecategory" />
+    <result column="MedicineNum" jdbcType="VARCHAR" property="medicinenum" />
+    <result column="BloodType" jdbcType="VARCHAR" property="bloodtype" />
+    <result column="Disease" jdbcType="VARCHAR" property="disease" />
+    <result column="Addr" jdbcType="VARCHAR" property="addr" />
+    <result column="VascularType" jdbcType="VARCHAR" property="vasculartype" />
+    <result column="DialyzerModel" jdbcType="VARCHAR" property="dialyzermodel" />
+    <result column="PipeType" jdbcType="VARCHAR" property="pipetype" />
+    <result column="Department" jdbcType="VARCHAR" property="department" />
+    <result column="HospitalizationNum" jdbcType="VARCHAR" property="hospitalizationnum" />
+    <result column="Doctor" jdbcType="VARCHAR" property="doctor" />
+    <result column="Addtime" jdbcType="TIMESTAMP" property="addtime" />
+    <result column="is_delete" jdbcType="INTEGER" property="isDelete" />
+    <result column="Sum" jdbcType="VARCHAR" property="sum" />
+    <result column="Marriage" jdbcType="VARCHAR" property="marriage" />
+    <result column="Nation" jdbcType="VARCHAR" property="nation" />
+    <result column="Occupation" jdbcType="VARCHAR" property="occupation" />
+    <result column="Native" jdbcType="VARCHAR" property="nativel" />
+    <result column="mode" jdbcType="VARCHAR" property="mode" />
+    <result column="protopathy" jdbcType="VARCHAR" property="protopathy" />
+    <result column="complication" jdbcType="VARCHAR" property="complication" />
+    <result column="SAF" jdbcType="VARCHAR" property="saf" />
+    <result column="allergy" jdbcType="VARCHAR" property="allergy" />
+    <result column="newst" jdbcType="DATE" property="newst" />
+    <result column="newstg" jdbcType="DATE" property="newstg" />
+    <result column="dry" jdbcType="DOUBLE" property="dry" />
+    <result column="tiw" jdbcType="VARCHAR" property="tiw" />
+    <result column="LongTime" jdbcType="VARCHAR" property="longtime" />
+    <result column="DeadMark" jdbcType="VARCHAR" property="deadmark" />
+    <result column="changestatus" jdbcType="VARCHAR" property="changestatus" />
+    <result column="changemode" jdbcType="VARCHAR" property="changemode" />
+    <result column="BloodTypeRH" jdbcType="VARCHAR" property="bloodtyperh" />
+    <result column="nat" jdbcType="VARCHAR" property="nat" />
+    <result column="profe" jdbcType="VARCHAR" property="profe" />
+    <result column="chn" jdbcType="VARCHAR" property="chn" />
+    <result column="jiguan" jdbcType="VARCHAR" property="jiguan" />
+    <result column="idtype" jdbcType="VARCHAR" property="idtype" />
+    <result column="jcnu" jdbcType="VARCHAR" property="jcnu" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    ID, `Source`, `Name`, card, Sex, `Identity`, Birth, Age, Tel, ContactsName, ContactsTel, 
+    InsuranceCategory, MedicineNum, BloodType, Disease, Addr, VascularType, DialyzerModel, 
+    PipeType, Department, HospitalizationNum, Doctor, Addtime, is_delete, `Sum`, Marriage, 
+    Nation, Occupation, Native, `mode`, protopathy, complication, SAF, allergy, newst, 
+    newstg, dry, tiw, LongTime, DeadMark, changestatus, changemode, BloodTypeRH, nat, 
+    profe, chn, jiguan, idtype, jcnu
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from patient
+    where ID = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from patient
+    where ID = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="ID" keyProperty="id" parameterType="com.domain.Patient" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into patient (`Source`, `Name`, card, 
+      Sex, `Identity`, Birth, 
+      Age, Tel, ContactsName, 
+      ContactsTel, InsuranceCategory, MedicineNum, 
+      BloodType, Disease, Addr, 
+      VascularType, DialyzerModel, PipeType, 
+      Department, HospitalizationNum, Doctor, 
+      Addtime, is_delete, `Sum`, 
+      Marriage, Nation, Occupation, 
+      Native, `mode`, protopathy, 
+      complication, SAF, allergy, 
+      newst, newstg, dry, tiw, 
+      LongTime, DeadMark, changestatus, 
+      changemode, BloodTypeRH, nat, 
+      profe, chn, jiguan, 
+      idtype, jcnu)
+    values (#{source,jdbcType=VARCHAR}, #{name,jdbcType=VARCHAR}, #{card,jdbcType=INTEGER}, 
+      #{sex,jdbcType=VARCHAR}, #{identity,jdbcType=VARCHAR}, #{birth,jdbcType=DATE}, 
+      #{age,jdbcType=INTEGER}, #{tel,jdbcType=BIGINT}, #{contactsname,jdbcType=VARCHAR}, 
+      #{contactstel,jdbcType=BIGINT}, #{insurancecategory,jdbcType=VARCHAR}, #{medicinenum,jdbcType=VARCHAR}, 
+      #{bloodtype,jdbcType=VARCHAR}, #{disease,jdbcType=VARCHAR}, #{addr,jdbcType=VARCHAR}, 
+      #{vasculartype,jdbcType=VARCHAR}, #{dialyzermodel,jdbcType=VARCHAR}, #{pipetype,jdbcType=VARCHAR}, 
+      #{department,jdbcType=VARCHAR}, #{hospitalizationnum,jdbcType=VARCHAR}, #{doctor,jdbcType=VARCHAR}, 
+      #{addtime,jdbcType=TIMESTAMP}, #{isDelete,jdbcType=INTEGER}, #{sum,jdbcType=VARCHAR}, 
+      #{marriage,jdbcType=VARCHAR}, #{nation,jdbcType=VARCHAR}, #{occupation,jdbcType=VARCHAR}, 
+      #{native,jdbcType=VARCHAR}, #{mode,jdbcType=VARCHAR}, #{protopathy,jdbcType=VARCHAR}, 
+      #{complication,jdbcType=VARCHAR}, #{saf,jdbcType=VARCHAR}, #{allergy,jdbcType=VARCHAR}, 
+      #{newst,jdbcType=DATE}, #{newstg,jdbcType=DATE}, #{dry,jdbcType=DOUBLE}, #{tiw,jdbcType=VARCHAR}, 
+      #{longtime,jdbcType=VARCHAR}, #{deadmark,jdbcType=VARCHAR}, #{changestatus,jdbcType=VARCHAR}, 
+      #{changemode,jdbcType=VARCHAR}, #{bloodtyperh,jdbcType=VARCHAR}, #{nat,jdbcType=VARCHAR}, 
+      #{profe,jdbcType=VARCHAR}, #{chn,jdbcType=VARCHAR}, #{jiguan,jdbcType=VARCHAR}, 
+      #{idtype,jdbcType=VARCHAR}, #{jcnu,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" keyColumn="ID" keyProperty="id" parameterType="com.domain.Patient" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into patient
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="source != null">
+        `Source`,
+      </if>
+      <if test="name != null">
+        `Name`,
+      </if>
+      <if test="card != null">
+        card,
+      </if>
+      <if test="sex != null">
+        Sex,
+      </if>
+      <if test="identity != null">
+        `Identity`,
+      </if>
+      <if test="birth != null">
+        Birth,
+      </if>
+      <if test="age != null">
+        Age,
+      </if>
+      <if test="tel != null">
+        Tel,
+      </if>
+      <if test="contactsname != null">
+        ContactsName,
+      </if>
+      <if test="contactstel != null">
+        ContactsTel,
+      </if>
+      <if test="insurancecategory != null">
+        InsuranceCategory,
+      </if>
+      <if test="medicinenum != null">
+        MedicineNum,
+      </if>
+      <if test="bloodtype != null">
+        BloodType,
+      </if>
+      <if test="disease != null">
+        Disease,
+      </if>
+      <if test="addr != null">
+        Addr,
+      </if>
+      <if test="vasculartype != null">
+        VascularType,
+      </if>
+      <if test="dialyzermodel != null">
+        DialyzerModel,
+      </if>
+      <if test="pipetype != null">
+        PipeType,
+      </if>
+      <if test="department != null">
+        Department,
+      </if>
+      <if test="hospitalizationnum != null">
+        HospitalizationNum,
+      </if>
+      <if test="doctor != null">
+        Doctor,
+      </if>
+      <if test="addtime != null">
+        Addtime,
+      </if>
+      <if test="isDelete != null">
+        is_delete,
+      </if>
+      <if test="sum != null">
+        `Sum`,
+      </if>
+      <if test="marriage != null">
+        Marriage,
+      </if>
+      <if test="nation != null">
+        Nation,
+      </if>
+      <if test="occupation != null">
+        Occupation,
+      </if>
+      <if test="nativel != null">
+        Native,
+      </if>
+      <if test="mode != null">
+        `mode`,
+      </if>
+      <if test="protopathy != null">
+        protopathy,
+      </if>
+      <if test="complication != null">
+        complication,
+      </if>
+      <if test="saf != null">
+        SAF,
+      </if>
+      <if test="allergy != null">
+        allergy,
+      </if>
+      <if test="newst != null">
+        newst,
+      </if>
+      <if test="newstg != null">
+        newstg,
+      </if>
+      <if test="dry != null">
+        dry,
+      </if>
+      <if test="tiw != null">
+        tiw,
+      </if>
+      <if test="longtime != null">
+        LongTime,
+      </if>
+      <if test="deadmark != null">
+        DeadMark,
+      </if>
+      <if test="changestatus != null">
+        changestatus,
+      </if>
+      <if test="changemode != null">
+        changemode,
+      </if>
+      <if test="bloodtyperh != null">
+        BloodTypeRH,
+      </if>
+      <if test="nat != null">
+        nat,
+      </if>
+      <if test="profe != null">
+        profe,
+      </if>
+      <if test="chn != null">
+        chn,
+      </if>
+      <if test="jiguan != null">
+        jiguan,
+      </if>
+      <if test="idtype != null">
+        idtype,
+      </if>
+      <if test="jcnu != null">
+        jcnu,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="source != null">
+        #{source,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="card != null">
+        #{card,jdbcType=INTEGER},
+      </if>
+      <if test="sex != null">
+        #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="identity != null">
+        #{identity,jdbcType=VARCHAR},
+      </if>
+      <if test="birth != null">
+        #{birth,jdbcType=DATE},
+      </if>
+      <if test="age != null">
+        #{age,jdbcType=INTEGER},
+      </if>
+      <if test="tel != null">
+        #{tel,jdbcType=BIGINT},
+      </if>
+      <if test="contactsname != null">
+        #{contactsname,jdbcType=VARCHAR},
+      </if>
+      <if test="contactstel != null">
+        #{contactstel,jdbcType=BIGINT},
+      </if>
+      <if test="insurancecategory != null">
+        #{insurancecategory,jdbcType=VARCHAR},
+      </if>
+      <if test="medicinenum != null">
+        #{medicinenum,jdbcType=VARCHAR},
+      </if>
+      <if test="bloodtype != null">
+        #{bloodtype,jdbcType=VARCHAR},
+      </if>
+      <if test="disease != null">
+        #{disease,jdbcType=VARCHAR},
+      </if>
+      <if test="addr != null">
+        #{addr,jdbcType=VARCHAR},
+      </if>
+      <if test="vasculartype != null">
+        #{vasculartype,jdbcType=VARCHAR},
+      </if>
+      <if test="dialyzermodel != null">
+        #{dialyzermodel,jdbcType=VARCHAR},
+      </if>
+      <if test="pipetype != null">
+        #{pipetype,jdbcType=VARCHAR},
+      </if>
+      <if test="department != null">
+        #{department,jdbcType=VARCHAR},
+      </if>
+      <if test="hospitalizationnum != null">
+        #{hospitalizationnum,jdbcType=VARCHAR},
+      </if>
+      <if test="doctor != null">
+        #{doctor,jdbcType=VARCHAR},
+      </if>
+      <if test="addtime != null">
+        #{addtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isDelete != null">
+        #{isDelete,jdbcType=INTEGER},
+      </if>
+      <if test="sum != null">
+        #{sum,jdbcType=VARCHAR},
+      </if>
+      <if test="marriage != null">
+        #{marriage,jdbcType=VARCHAR},
+      </if>
+      <if test="nation != null">
+        #{nation,jdbcType=VARCHAR},
+      </if>
+      <if test="occupation != null">
+        #{occupation,jdbcType=VARCHAR},
+      </if>
+      <if test="native != null">
+        #{native,jdbcType=VARCHAR},
+      </if>
+      <if test="mode != null">
+        #{mode,jdbcType=VARCHAR},
+      </if>
+      <if test="protopathy != null">
+        #{protopathy,jdbcType=VARCHAR},
+      </if>
+      <if test="complication != null">
+        #{complication,jdbcType=VARCHAR},
+      </if>
+      <if test="saf != null">
+        #{saf,jdbcType=VARCHAR},
+      </if>
+      <if test="allergy != null">
+        #{allergy,jdbcType=VARCHAR},
+      </if>
+      <if test="newst != null">
+        #{newst,jdbcType=DATE},
+      </if>
+      <if test="newstg != null">
+        #{newstg,jdbcType=DATE},
+      </if>
+      <if test="dry != null">
+        #{dry,jdbcType=DOUBLE},
+      </if>
+      <if test="tiw != null">
+        #{tiw,jdbcType=VARCHAR},
+      </if>
+      <if test="longtime != null">
+        #{longtime,jdbcType=VARCHAR},
+      </if>
+      <if test="deadmark != null">
+        #{deadmark,jdbcType=VARCHAR},
+      </if>
+      <if test="changestatus != null">
+        #{changestatus,jdbcType=VARCHAR},
+      </if>
+      <if test="changemode != null">
+        #{changemode,jdbcType=VARCHAR},
+      </if>
+      <if test="bloodtyperh != null">
+        #{bloodtyperh,jdbcType=VARCHAR},
+      </if>
+      <if test="nat != null">
+        #{nat,jdbcType=VARCHAR},
+      </if>
+      <if test="profe != null">
+        #{profe,jdbcType=VARCHAR},
+      </if>
+      <if test="chn != null">
+        #{chn,jdbcType=VARCHAR},
+      </if>
+      <if test="jiguan != null">
+        #{jiguan,jdbcType=VARCHAR},
+      </if>
+      <if test="idtype != null">
+        #{idtype,jdbcType=VARCHAR},
+      </if>
+      <if test="jcnu != null">
+        #{jcnu,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.domain.Patient">
+    <!--@mbg.generated-->
+    update patient
+    <set>
+      <if test="source != null">
+        `Source` = #{source,jdbcType=VARCHAR},
+      </if>
+      <if test="name != null">
+        `Name` = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="card != null">
+        card = #{card,jdbcType=INTEGER},
+      </if>
+      <if test="sex != null">
+        Sex = #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="identity != null">
+        `Identity` = #{identity,jdbcType=VARCHAR},
+      </if>
+      <if test="birth != null">
+        Birth = #{birth,jdbcType=DATE},
+      </if>
+      <if test="age != null">
+        Age = #{age,jdbcType=INTEGER},
+      </if>
+      <if test="tel != null">
+        Tel = #{tel,jdbcType=BIGINT},
+      </if>
+      <if test="contactsname != null">
+        ContactsName = #{contactsname,jdbcType=VARCHAR},
+      </if>
+      <if test="contactstel != null">
+        ContactsTel = #{contactstel,jdbcType=BIGINT},
+      </if>
+      <if test="insurancecategory != null">
+        InsuranceCategory = #{insurancecategory,jdbcType=VARCHAR},
+      </if>
+      <if test="medicinenum != null">
+        MedicineNum = #{medicinenum,jdbcType=VARCHAR},
+      </if>
+      <if test="bloodtype != null">
+        BloodType = #{bloodtype,jdbcType=VARCHAR},
+      </if>
+      <if test="disease != null">
+        Disease = #{disease,jdbcType=VARCHAR},
+      </if>
+      <if test="addr != null">
+        Addr = #{addr,jdbcType=VARCHAR},
+      </if>
+      <if test="vasculartype != null">
+        VascularType = #{vasculartype,jdbcType=VARCHAR},
+      </if>
+      <if test="dialyzermodel != null">
+        DialyzerModel = #{dialyzermodel,jdbcType=VARCHAR},
+      </if>
+      <if test="pipetype != null">
+        PipeType = #{pipetype,jdbcType=VARCHAR},
+      </if>
+      <if test="department != null">
+        Department = #{department,jdbcType=VARCHAR},
+      </if>
+      <if test="hospitalizationnum != null">
+        HospitalizationNum = #{hospitalizationnum,jdbcType=VARCHAR},
+      </if>
+      <if test="doctor != null">
+        Doctor = #{doctor,jdbcType=VARCHAR},
+      </if>
+      <if test="addtime != null">
+        Addtime = #{addtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="isDelete != null">
+        is_delete = #{isDelete,jdbcType=INTEGER},
+      </if>
+      <if test="sum != null">
+        `Sum` = #{sum,jdbcType=VARCHAR},
+      </if>
+      <if test="marriage != null">
+        Marriage = #{marriage,jdbcType=VARCHAR},
+      </if>
+      <if test="nation != null">
+        Nation = #{nation,jdbcType=VARCHAR},
+      </if>
+      <if test="occupation != null">
+        Occupation = #{occupation,jdbcType=VARCHAR},
+      </if>
+      <if test="native != null">
+        Native = #{native,jdbcType=VARCHAR},
+      </if>
+      <if test="mode != null">
+        `mode` = #{mode,jdbcType=VARCHAR},
+      </if>
+      <if test="protopathy != null">
+        protopathy = #{protopathy,jdbcType=VARCHAR},
+      </if>
+      <if test="complication != null">
+        complication = #{complication,jdbcType=VARCHAR},
+      </if>
+      <if test="saf != null">
+        SAF = #{saf,jdbcType=VARCHAR},
+      </if>
+      <if test="allergy != null">
+        allergy = #{allergy,jdbcType=VARCHAR},
+      </if>
+      <if test="newst != null">
+        newst = #{newst,jdbcType=DATE},
+      </if>
+      <if test="newstg != null">
+        newstg = #{newstg,jdbcType=DATE},
+      </if>
+      <if test="dry != null">
+        dry = #{dry,jdbcType=DOUBLE},
+      </if>
+      <if test="tiw != null">
+        tiw = #{tiw,jdbcType=VARCHAR},
+      </if>
+      <if test="longtime != null">
+        LongTime = #{longtime,jdbcType=VARCHAR},
+      </if>
+      <if test="deadmark != null">
+        DeadMark = #{deadmark,jdbcType=VARCHAR},
+      </if>
+      <if test="changestatus != null">
+        changestatus = #{changestatus,jdbcType=VARCHAR},
+      </if>
+      <if test="changemode != null">
+        changemode = #{changemode,jdbcType=VARCHAR},
+      </if>
+      <if test="bloodtyperh != null">
+        BloodTypeRH = #{bloodtyperh,jdbcType=VARCHAR},
+      </if>
+      <if test="nat != null">
+        nat = #{nat,jdbcType=VARCHAR},
+      </if>
+      <if test="profe != null">
+        profe = #{profe,jdbcType=VARCHAR},
+      </if>
+      <if test="chn != null">
+        chn = #{chn,jdbcType=VARCHAR},
+      </if>
+      <if test="jiguan != null">
+        jiguan = #{jiguan,jdbcType=VARCHAR},
+      </if>
+      <if test="idtype != null">
+        idtype = #{idtype,jdbcType=VARCHAR},
+      </if>
+      <if test="jcnu != null">
+        jcnu = #{jcnu,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.domain.Patient">
+    <!--@mbg.generated-->
+    update patient
+    set `Source` = #{source,jdbcType=VARCHAR},
+      `Name` = #{name,jdbcType=VARCHAR},
+      card = #{card,jdbcType=INTEGER},
+      Sex = #{sex,jdbcType=VARCHAR},
+      `Identity` = #{identity,jdbcType=VARCHAR},
+      Birth = #{birth,jdbcType=DATE},
+      Age = #{age,jdbcType=INTEGER},
+      Tel = #{tel,jdbcType=BIGINT},
+      ContactsName = #{contactsname,jdbcType=VARCHAR},
+      ContactsTel = #{contactstel,jdbcType=BIGINT},
+      InsuranceCategory = #{insurancecategory,jdbcType=VARCHAR},
+      MedicineNum = #{medicinenum,jdbcType=VARCHAR},
+      BloodType = #{bloodtype,jdbcType=VARCHAR},
+      Disease = #{disease,jdbcType=VARCHAR},
+      Addr = #{addr,jdbcType=VARCHAR},
+      VascularType = #{vasculartype,jdbcType=VARCHAR},
+      DialyzerModel = #{dialyzermodel,jdbcType=VARCHAR},
+      PipeType = #{pipetype,jdbcType=VARCHAR},
+      Department = #{department,jdbcType=VARCHAR},
+      HospitalizationNum = #{hospitalizationnum,jdbcType=VARCHAR},
+      Doctor = #{doctor,jdbcType=VARCHAR},
+      Addtime = #{addtime,jdbcType=TIMESTAMP},
+      is_delete = #{isDelete,jdbcType=INTEGER},
+      `Sum` = #{sum,jdbcType=VARCHAR},
+      Marriage = #{marriage,jdbcType=VARCHAR},
+      Nation = #{nation,jdbcType=VARCHAR},
+      Occupation = #{occupation,jdbcType=VARCHAR},
+      Native = #{native,jdbcType=VARCHAR},
+      `mode` = #{mode,jdbcType=VARCHAR},
+      protopathy = #{protopathy,jdbcType=VARCHAR},
+      complication = #{complication,jdbcType=VARCHAR},
+      SAF = #{saf,jdbcType=VARCHAR},
+      allergy = #{allergy,jdbcType=VARCHAR},
+      newst = #{newst,jdbcType=DATE},
+      newstg = #{newstg,jdbcType=DATE},
+      dry = #{dry,jdbcType=DOUBLE},
+      tiw = #{tiw,jdbcType=VARCHAR},
+      LongTime = #{longtime,jdbcType=VARCHAR},
+      DeadMark = #{deadmark,jdbcType=VARCHAR},
+      changestatus = #{changestatus,jdbcType=VARCHAR},
+      changemode = #{changemode,jdbcType=VARCHAR},
+      BloodTypeRH = #{bloodtyperh,jdbcType=VARCHAR},
+      nat = #{nat,jdbcType=VARCHAR},
+      profe = #{profe,jdbcType=VARCHAR},
+      chn = #{chn,jdbcType=VARCHAR},
+      jiguan = #{jiguan,jdbcType=VARCHAR},
+      idtype = #{idtype,jdbcType=VARCHAR},
+      jcnu = #{jcnu,jdbcType=VARCHAR}
+    where ID = #{id,jdbcType=INTEGER}
+  </update>
+
+<!--auto generated by MybatisCodeHelper on 2019-07-14-->
+  <select id="selectByAll" resultMap="BaseResultMap">
+    select
+    <include refid="Base_Column_List"/>
+    from patient
+    where 1=1
+    <if test="id != null">
+      and ID=#{id,jdbcType=INTEGER}
+    </if>
+    <if test="source != null">
+      and `Source`=#{source,jdbcType=VARCHAR}
+    </if>
+    <if test="name != null">
+      and `Name`=#{name,jdbcType=VARCHAR}
+    </if>
+    <if test="card != null">
+      and card=#{card,jdbcType=INTEGER}
+    </if>
+    <if test="sex != null">
+      and Sex=#{sex,jdbcType=VARCHAR}
+    </if>
+    <if test="identity != null">
+      and `Identity`=#{identity,jdbcType=VARCHAR}
+    </if>
+    <if test="birth != null">
+      and Birth=#{birth,jdbcType=DATE}
+    </if>
+    <if test="age != null">
+      and Age=#{age,jdbcType=INTEGER}
+    </if>
+    <if test="tel != null">
+      and Tel=#{tel,jdbcType=BIGINT}
+    </if>
+    <if test="contactsname != null">
+      and ContactsName=#{contactsname,jdbcType=VARCHAR}
+    </if>
+    <if test="contactstel != null">
+      and ContactsTel=#{contactstel,jdbcType=BIGINT}
+    </if>
+    <if test="insurancecategory != null">
+      and InsuranceCategory=#{insurancecategory,jdbcType=VARCHAR}
+    </if>
+    <if test="medicinenum != null">
+      and MedicineNum=#{medicinenum,jdbcType=VARCHAR}
+    </if>
+    <if test="bloodtype != null">
+      and BloodType=#{bloodtype,jdbcType=VARCHAR}
+    </if>
+    <if test="disease != null">
+      and Disease=#{disease,jdbcType=VARCHAR}
+    </if>
+    <if test="addr != null">
+      and Addr=#{addr,jdbcType=VARCHAR}
+    </if>
+    <if test="vasculartype != null">
+      and VascularType=#{vasculartype,jdbcType=VARCHAR}
+    </if>
+    <if test="dialyzermodel != null">
+      and DialyzerModel=#{dialyzermodel,jdbcType=VARCHAR}
+    </if>
+    <if test="pipetype != null">
+      and PipeType=#{pipetype,jdbcType=VARCHAR}
+    </if>
+    <if test="department != null">
+      and Department=#{department,jdbcType=VARCHAR}
+    </if>
+    <if test="hospitalizationnum != null">
+      and HospitalizationNum=#{hospitalizationnum,jdbcType=VARCHAR}
+    </if>
+    <if test="doctor != null">
+      and Doctor=#{doctor,jdbcType=VARCHAR}
+    </if>
+    <if test="addtime != null">
+      and Addtime=#{addtime,jdbcType=TIMESTAMP}
+    </if>
+    <if test="isDelete != null">
+      and is_delete=#{isDelete,jdbcType=INTEGER}
+    </if>
+    <if test="sum != null">
+      and `Sum`=#{sum,jdbcType=VARCHAR}
+    </if>
+    <if test="marriage != null">
+      and Marriage=#{marriage,jdbcType=VARCHAR}
+    </if>
+    <if test="nation != null">
+      and Nation=#{nation,jdbcType=VARCHAR}
+    </if>
+    <if test="occupation != null">
+      and Occupation=#{occupation,jdbcType=VARCHAR}
+    </if>
+    <if test="mode != null">
+      and `mode`=#{mode,jdbcType=VARCHAR}
+    </if>
+    <if test="protopathy != null">
+      and protopathy=#{protopathy,jdbcType=VARCHAR}
+    </if>
+    <if test="complication != null">
+      and complication=#{complication,jdbcType=VARCHAR}
+    </if>
+    <if test="saf != null">
+      and SAF=#{saf,jdbcType=VARCHAR}
+    </if>
+    <if test="allergy != null">
+      and allergy=#{allergy,jdbcType=VARCHAR}
+    </if>
+    <if test="newst != null">
+      and newst=#{newst,jdbcType=DATE}
+    </if>
+    <if test="newstg != null">
+      and newstg=#{newstg,jdbcType=DATE}
+    </if>
+    <if test="dry != null">
+      and dry=#{dry,jdbcType=DOUBLE}
+    </if>
+    <if test="tiw != null">
+      and tiw=#{tiw,jdbcType=VARCHAR}
+    </if>
+    <if test="longtime != null">
+      and LongTime=#{longtime,jdbcType=VARCHAR}
+    </if>
+    <if test="deadmark != null">
+      and DeadMark=#{deadmark,jdbcType=VARCHAR}
+    </if>
+    <if test="changestatus != null">
+      and changestatus=#{changestatus,jdbcType=VARCHAR}
+    </if>
+    <if test="changemode != null">
+      and changemode=#{changemode,jdbcType=VARCHAR}
+    </if>
+    <if test="bloodtyperh != null">
+      and BloodTypeRH=#{bloodtyperh,jdbcType=VARCHAR}
+    </if>
+    <if test="nat != null">
+      and nat=#{nat,jdbcType=VARCHAR}
+    </if>
+    <if test="profe != null">
+      and profe=#{profe,jdbcType=VARCHAR}
+    </if>
+    <if test="chn != null">
+      and chn=#{chn,jdbcType=VARCHAR}
+    </if>
+    <if test="jiguan != null">
+      and jiguan=#{jiguan,jdbcType=VARCHAR}
+    </if>
+    <if test="idtype != null">
+      and idtype=#{idtype,jdbcType=VARCHAR}
+    </if>
+    <if test="jcnu != null">
+      and jcnu=#{jcnu,jdbcType=VARCHAR}
+    </if>
+  </select>
+</mapper>
